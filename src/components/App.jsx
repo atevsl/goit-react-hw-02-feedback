@@ -36,9 +36,10 @@ class App extends React.Component {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-start',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           fontSize: 40,
           color: '#010101',
+          marginLeft: 30,
         }}
       >
         <Section title="Please leave feedback">

@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
+const StyledTitle = styled.h2`
+   {
+    font-size: 42px;
+  }
+`;
 const Section = ({ title, children }) => {
   return (
     <section>
-      <h2>{title}</h2>
+      <StyledTitle>{title}</StyledTitle>
       {children}
     </section>
   );
