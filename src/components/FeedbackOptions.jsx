@@ -1,15 +1,18 @@
-// import React from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-// class FeedbackOptions extends React.Component {
-//   render() {
-//     return (
-//       <>
-//         <button type="button">good</button>
-//         <button type="button">neutral</button>
-//         <button type="button">bad</button>
-//       </>
-//     );
-//   }
-// }
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  return Object.keys(options).map(el => {
+    return (
+      <button type="button" onClick={onLeaveFeedback} key={el}>
+        {el}
+      </button>
+    );
+  });
+};
 
-// export default FeedbackOptions;
+export default FeedbackOptions;
+FeedbackOptions.propTypes = {
+  options: PropTypes.object.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
